@@ -1,0 +1,16 @@
+    # Site settings
+title: Dengrc Blogs
+email: 624616667@qq.com
+description: Dengrc Blogs
+
+url: "http://dengrc.com"
+baseurl: "/dengrc.github.io"
+github_username: Dengrc0-0
+permalink: /:year/:month/:day/:title/
+# this is the url root of the view source link on the footer page.
+viewsourceroot: https://github.com/Dengrc0-0/Dengrc0-0.github.io/blob/master/
+# this is the url root of the create page link on the footer page.
+newsourceroot: https://github.com/Dengrc0-0/Dengrc0-0.github.io/new/master
+
+
+markdown: kramdown
