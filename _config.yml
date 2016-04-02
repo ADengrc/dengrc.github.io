@@ -4,7 +4,6 @@ email: 624616667@qq.com
 description: Dengrc Blogs
 
 url: "http://dengrc.com"
-baseurl: "/dengrc.github.io"
 github_username: Dengrc0-0
 permalink: /:year/:month/:day/:title/
 # this is the url root of the view source link on the footer page.
