@@ -6,16 +6,8 @@ $(document).ready(function() {
     categoryDisplay();
     generateContent();
     backToTop();
-});
-
-/**
- * load方法，页面的加载完成后触发
- * {fixFooterInit();} 固定Footer栏
- */
-$(window).load(function() {
     fixFooterInit();
 });
-
 
 /**
  * 固定底栏的初始化方法
