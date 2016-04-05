@@ -15,7 +15,7 @@ layout: default
   <div class="col-sm-9">
     <div class="post-area ">
 	  <div class="post-list-header">
-	  文章列表
+	  日志列表
 	  </div>
       <div class="post-list-body">
         <div class="all-posts" post-cate="All">
@@ -28,7 +28,6 @@ layout: default
             </a>
           {% endfor %}
         </div>
-        <!-- <div class="posts-in-categories"> -->
         {% for category in site.categories %}
           <div post-cate="{{category | first}}">
             {% for posts in category  %}
@@ -45,7 +44,6 @@ layout: default
             {% endfor %}
           </div>
         {% endfor %}
-        <!-- </div> -->
       </div>
     </div>
   </div>

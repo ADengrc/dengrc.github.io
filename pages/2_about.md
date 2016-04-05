@@ -1,9 +1,9 @@
----
+<!-- ---
 layout: page
-title: About
+title: 关于
 comments: true
 permalink: /about/
 ---
 
 * content
-{:toc}
+{:toc} -->

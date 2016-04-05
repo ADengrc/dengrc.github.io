@@ -12,9 +12,9 @@ $(document).ready(function() {
  * load方法，页面的加载完成后触发
  * {fixFooterInit();} 固定Footer栏
  */
-/*$(window).load(function() {
+$(window).load(function() {
     fixFooterInit();
-});*/
+});
 
 
 /**
@@ -49,23 +49,12 @@ function fixFooterInit() {
  */
 function fixFooter(footerHeight, footerMarginTop) {
     var windowHeight = $(window).height();
-    var contentHeight = $('body>.container').outerHeight() + $('body>.container').offset().top + footerHeight + footerMarginTop;
-    // console.log("window---"+windowHeight);
-    // console.log("$('body>.container').outerHeight()---"+$('body>.container').outerHeight() );
-    // console.log("$('body>.container').height()---"+$('body>.container').height() );
-    // console.log("$('#main').height()--------"+$('#main').height());
-    // console.log("$('body').height()--------"+$('body').height());
-    //console.log("$('#main').html()--------"+$('#main').html());
-    // console.log("$('body>.container').offset().top----"+$('body>.container').offset().top);
-    // console.log("footerHeight---"+footerHeight);
-    // console.log("footerMarginTop---"+footerMarginTop);
-    console.log(contentHeight);
+    var contentHeight = $('body>.container').outerHeight() + $('body>.container').offset().top + footerHeight + footerMarginTop-10;
     if (contentHeight < windowHeight) {
         $('footer').addClass('navbar-fixed-bottom');
     } else {
         $('footer').removeClass('navbar-fixed-bottom');
     }
-
     $('footer').show(400);
 }
 
@@ -88,12 +77,9 @@ function getFooterMarginTop() {
  * @return {[type]} [description]
  */
 function categoryDisplay() {
-    /*only show All*/
     $('.post-list-body>div[post-cate!=All]').hide();
-    /*show category when click categories list*/
     $('.categories-list-item').click(function() {
-        var cate = $(this).attr('cate'); //get category's name
-
+        var cate = $(this).attr('cate');
         $('.post-list-body>div[post-cate!=' + cate + ']').hide(250);
         $('.post-list-body>div[post-cate=' + cate + ']').show(400);
     });
@@ -129,19 +115,10 @@ function backToTop() {
  * 侧边目录
  */
 function generateContent() {
-
-    // console.log($('#markdown-toc').html());
     if (typeof $('#markdown-toc').html() === 'undefined') {
-        // $('#content .content-text').html('<ul><li>文本较短，暂无目录</li></ul>');
         $('#content').hide();
         $('#myArticle').removeClass('col-sm-9').addClass('col-sm-12');
     } else {
         $('#content .content-text').html('<ul>' + $('#markdown-toc').html() + '</ul>');
-        /*   //数据加载完成后，加固定边栏
-        $('#myAffix').attr({
-            'data-spy': 'affix',
-            'data-offset': '50'
-        });*/
     }
-    console.log("myAffix!!!");
 }
