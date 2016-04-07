@@ -9,26 +9,16 @@ $(document).ready(function() {
     fixFooterInit();
 });
 
-/**
- * 固定底栏的初始化方法
- * 在一开始载入页面时，使用fixFooter()方法固定底栏。
- * 在浏览器窗口改变大小是，依然固定底栏
- * @return {[type]} [description]
- */
 function fixFooterInit() {
     var footerHeight = $('footer').outerHeight();
     var footerMarginTop = getFooterMarginTop() - 0; //类型转换
-    // var footerMarginTop = 80;
 
-    fixFooter(footerHeight, footerMarginTop); //fix footer at the beginning
+    fixFooter(footerHeight, footerMarginTop);
 
-    $(window).resize(function() { //when resize window, footer can auto get the postion
+    $(window).resize(function() {
         fixFooter(footerHeight, footerMarginTop);
     });
 
-    /*    $('body').click(function() {
-        fixFooter(footerHeight, footerMarginTop);
-    });*/
 
 
 }
