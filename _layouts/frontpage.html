@@ -15,7 +15,6 @@ layout: default
   <div class="col-sm-9">
     <div class="post-area ">
 	  <div class="post-list-header">
-	  日志列表
 	  </div>
       <div class="post-list-body">
         <div class="all-posts" post-cate="All">
@@ -24,7 +23,8 @@ layout: default
               <h2>
               {{ post.title }}
               </h2>
-              <span class="">{{ post.date | date: "%Y %m %d" }}</span>
+              <span class="">{{ post.date | date: "%Y-%m-%d" }}</span>
+              {{ post.excerpt }}
             </a>
           {% endfor %}
         </div>
@@ -37,7 +37,7 @@ layout: default
                     <h2>
                     {{ post.title }}
                     </h2>
-                    <span class="">{{ post.date | date: "%Y %m %d" }}</span>
+                    <span class="">{{ post.date | date: "%Y-%m-%d" }}</span>
                   </a>
                 {% endif %}
               {% endfor %}
