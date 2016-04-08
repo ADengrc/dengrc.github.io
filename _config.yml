@@ -1,7 +1,7 @@
     # Site settings
 title: Dengrc的个人博客
 email: 624616667@qq.com
-description: Dengrc Blogs
+description: Dengrc的个人博客
 
 url: "http://dengrc.com"
 github_username: Dengrc0-0
@@ -11,3 +11,5 @@ viewsourceroot: https://github.com/Dengrc0-0/Dengrc0-0.github.io/blob/master/
 # this is the url root of the create page link on the footer page.
 newsourceroot: https://github.com/Dengrc0-0/Dengrc0-0.github.io/new/master
 markdown: kramdown
+
+keywords: Dengrc

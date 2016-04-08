@@ -81,7 +81,6 @@ nav{
 	display: block;
 	padding:8px 30px 10px 30px;
 	border-bottom:1px solid #ddd;
-
 	transition:0.4s ease;
 	-webkit-transition:0.4s ease;
 	-moz-transition:0.4s ease;
@@ -91,11 +90,15 @@ nav{
 	border-bottom: none;
 }
 .post-list-item h2{
+	font-size: 24px;
+	margin: 8px 0 8px 0;
+	padding: 0;
+}
+.post-list-item h3{
 	font-size: 20px;
 	margin: 8px 0 8px 0;
 	padding: 0;
 }
-
 .post-list-item:hover{
 	background-color: rgba(0,0,6,0.05);
 
