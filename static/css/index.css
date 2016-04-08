@@ -95,6 +95,7 @@ nav{
 	padding: 0;
 }
 .post-list-item h3{
+	line-height: 30px;
 	font-size: 20px;
 	margin: 8px 0 8px 0;
 	padding: 0;
