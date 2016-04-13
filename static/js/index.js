@@ -85,11 +85,6 @@ function backToTop() {
             scrollTop: "0"
         }, 500);
     });
-
-    //初始化tip
-    $(function() {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
 }
 
 
