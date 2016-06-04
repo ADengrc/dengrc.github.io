@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="row">
-  <div id="myArticle" class="col-sm-9">
+  <div id="myArticle" class="col-sm-12">
     <div class="post-area post">
       <header>
         <h1>{{ page.title }}</h1>
@@ -18,14 +18,23 @@ layout: default
         </div>
     </div>
   </div>
-
-  <div id="content" class="col-sm-3">
-    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
-      <div class="categories-list-header">
-        Content
-      </div>
-      <div class="content-text"></div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="post-area post comment">
+            <div class="comment-push">
+                <textarea id="commentText" rows="3" placeholder="评论内容"></textarea>
+                <a id="commentPush" class="comment-push-btn">匿名评论</a>
+            </div>
+            <div class="comment-list" id="comment">
+                <div class="title">
+                    <span>评论列表</span>
+                </div>
+                <ul class="list" id="commentList">
+                </ul>
+            </div>
+        </div>
+        <script src = "https://cdn.wilddog.com/js/client/current/wilddog.js" ></script>
+        <script type="text/javascript"  src="{{"/static/js/comment.js" | prepend: site.baseurl }}"></script>
     </div>
-  </div>
-
 </div>

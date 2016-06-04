@@ -4,6 +4,7 @@
 $(document).ready(function() {
 
     categoryDisplay();
+    generateContent();
     backToTop();
     fixFooterInit();
 });
@@ -47,6 +48,7 @@ function getFooterMarginTop() {
     var margintop = $('footer').css('marginTop');
     var patt = new RegExp("[0-9]*");
     var re = patt.exec(margintop);
+    // console.log(re[0]);
     return re[0];
 }
 
