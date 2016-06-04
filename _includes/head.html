@@ -1,17 +1,17 @@
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1">
-	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-	<meta name="keywords" content="{{ site.keywords }}">
-	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-	<link rel="SHORTCUT ICON" href="{{"/dengrc.ico" | prepend: site.baseurl }}"/>
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="SHORTCUT ICON" href="{{" /dengrc.ico " | prepend: site.baseurl }}"/>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}" />
 
-    <link rel="stylesheet" type="text/css" href="{{"/static/css/bootstrap.min.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="{{ "/static/css/index.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{" /static/css/bootstrap.min.css " | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ " /static/css/index.css " | prepend: site.baseurl }}">
     <link rel="stylesheet" type="text/css" href="/static/css/monokai_sublime.min.css">
-	<script type="text/javascript" src="/static/js/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="/static/js/highlight.min.js"></script>
+    <script type="text/javascript" src="{{" /static/js/index.js " | prepend:site.baseurl}}"></script>
 </head>

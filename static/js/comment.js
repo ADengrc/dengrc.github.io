@@ -10,6 +10,7 @@
     }
     var ref = new Wilddog('https://dengrc-blog.wilddogio.com'),
         articleRef = ref.child('articles').child(strEscape(window.location.pathname));
+    //评论Li组装
     var GetComment = function(data) {};
     GetComment.prototype = {
         getLi: function(data) {
