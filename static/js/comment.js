@@ -59,7 +59,7 @@
             document.getElementById('comment').style.display = "block";
             var ul = document.getElementById('commentList');
             for (i in data) {
-                ul.appendChild(getComment.getLi(data[i]));
+                ul.insertBefore(getComment.getLi(data[i]),ul.firstChild);
             }
         }
     });
