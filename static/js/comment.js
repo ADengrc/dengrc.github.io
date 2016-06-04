@@ -52,8 +52,9 @@
         }
     };
     var getComment = new GetComment();
+    var isData = false;
     articleRef.once('value', function(result) {
-        var data = result.val();
+        var data = isData = result.val();
         if (data) {
             document.getElementById('comment').style.display = "block";
             var ul = document.getElementById('commentList');
@@ -64,12 +65,13 @@
     });
     var isFirst = true;
     articleRef.limitToLast(1).on('child_added', function(result) {
-        var data = result.val();
-        if(isFirst){
+        if(isData&&isFirst){
             isFirst = false;
             return;
         }
+        var data = result.val();
         if (data) {
+            document.getElementById('comment').style.display = "block";
             var ul = document.getElementById('commentList');
             ul.insertBefore(getComment.getLi(data),ul.firstChild);
         }
