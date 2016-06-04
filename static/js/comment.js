@@ -98,6 +98,7 @@
             text: document.getElementById('commentText').value,
             time: timeStr
         }
+        document.getElementById('commentText').value = '';
         articleRef.push(data);
     });
 })();
