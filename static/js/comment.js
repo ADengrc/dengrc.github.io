@@ -56,27 +56,31 @@
     var isData = false;
     articleRef.once('value', function(result) {
         var data = isData = result.val();
+        var comment = document.getElementById('comment')
+        var ul = document.createElement('ul');
+        ul.className = 'list';
+        ul.id = 'commentList';
         if (data) {
-            document.getElementById('comment').style.display = "block";
-            var ul = document.getElementById('commentList');
+            comment.style.display = "block";
             for (i in data) {
-                ul.insertBefore(getComment.getLi(data[i]),ul.firstChild);
+                ul.insertBefore(getComment.getLi(data[i]), ul.firstChild);
             }
         }
+        comment.appendChild(ul);
     });
 
     var pushBtn = document.getElementById('commentPush');
     var isFirst = true;
 
     pushBtn.addEventListener('click', function(e) {
-        if(isFirst){
+        if (isFirst) {
             isFirst = false;
             articleRef.limitToLast(1).on('child_added', function(result) {
                 var data = result.val();
                 if (data) {
                     document.getElementById('comment').style.display = "block";
                     var ul = document.getElementById('commentList');
-                    ul.insertBefore(getComment.getLi(data),ul.firstChild);
+                    ul.insertBefore(getComment.getLi(data), ul.firstChild);
                 }
             });
         }
