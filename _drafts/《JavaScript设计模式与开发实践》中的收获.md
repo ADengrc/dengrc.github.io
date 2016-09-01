@@ -126,7 +126,10 @@ category: 学习
 
     实现思路:
 
-    * arguments
+    * 使用`arguments`来判断是否传入参数
+    * 有参数传入时，把参数转成数组后`push`到闭包的`args`变量中
+    * 没参数传入时则调用被`curry`的函数处理`args`中的参数
+    * ES6中可以使用`(...rest)=>{console.log(rest)}`获取传入的参数
 
             var currying = function(fn){  //把一个函数currying
                     var args = [];        //用来缓存传入的参数
@@ -162,9 +165,10 @@ category: 学习
 
     实现思路：
 
-    * 使用setTimeout
-    * 根据定时器判断上一次的延迟执行是否未完成
-    * 函数执行完毕后清除定时器
+    * 使用闭包延长`timer`的生命周期,缓存传入的函数
+    * 闭包返回的函数中使用`apply`调用传入的`fn`函数，并把自身传入的参数代入
+    * 根据`timer`是否存在`setTimeout`的实例来判断上一次的延迟执行是否未完成
+    * 函数执行完毕后清除`timer`
 
             var throttle = function(fn,interval){
                 var self = fn, //保存需要执行的函数
