@@ -4,7 +4,7 @@ email: 624616667@qq.com
 description: Dengrc的博客，专注前端开发
 
 url: "http://dengrc.com"
-github_username: Dengrc0-0
+github_username: Jesse-Deng
 permalink: /:year/:month/:day/:title/
 # this is the url root of the view source link on the footer page.
 viewsourceroot: https://github.com/Dengrc0-0/Dengrc0-0.github.io/blob/master/
